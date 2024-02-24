@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: #deeaee;
+            text-align:center;
+            
+        }
+     
+
+        .cl-button{
+            text-align: center;
+            border-radius: 20px;
+            background-color:#b2c2bf;
+            transition: all 0.4s ease;
+            width: 150px; 
+            height: 50px;
+            margin:100px;
+            font-size: 20px; 
+            padding: 10px;
+                }
+        .cl-button:hover{
+            transform: scale(1.2);
+        }
+        
+        input[type="text"] {
+            border: none;
+            outline:none;
+            font-size: 25px;
+            background-color:transparent;
+            text-align:center;
+        }
+
+    </style>
+    </head>
+    <body>
+        <button class="cl-button">Click me!</button>
+        <h2>The button was clicked...</h2>
+        <br>
+        <h2><input type="text" value="1" readonly></h2>
+
+        <script>
+              const clickButton = document.querySelectorAll('.cl-button');
+        clickButton.forEach(button => {
+            button.addEventListener('click', (event) => {
+                const input = event.target.parentNode.querySelector('input');
+                input.value = parseInt(input.value) + 1;
+            });
+        });
+          
+
+
+        </script>
+
+    </body>
+    </html>
