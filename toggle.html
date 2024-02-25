@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background:linear-gradient(90deg,#36486b,#c8c3cc,#667292, #d6d4e0);
+            text-align:center;
+            }
+
+        .button{
+            transition:all 0.3s ease;
+            text-align: center;
+            padding:15px 30px;
+            cursor:pointer;
+            border-radius:20px;
+            font-size:16px;   
+            background-color: #454140;
+            color:white;
+            margin:350px;
+        }
+        .button:hover {
+            transform:scale(1.2);
+            font-size:22px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+            background-color: #b2b2b2;
+            color:black;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="hi" class="button" onclick="changeText()">Hello!</button>
+    <script>
+        function changeText(){
+            var word = document.getElementById("hi");
+            if (word.innerText == "Hello!") {
+                word.innerText = "Bye!";                
+            }
+            else {
+                word.innerText = "Hello!";
+            }
+        }
+
+    </script>
+</body>
+</html>
