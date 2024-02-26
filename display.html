@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(90deg,#96ceb4,#622569,#e06377);
+            text-align: center;
+        }
+        .button {
+        height:40px;
+        border-radius:20px;
+        width:100px;
+        margin-top:30px;
+        margin-left:30px;
+        font-size:15px;
+        font-weight:bold;
+        background-color:#bccad6;
+        transition:all 0.3s ease;
+        }
+        
+        .button:hover {
+            transform:scale(1.1);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+            font-size:18px;
+        }
+
+        input[type="text"] {
+            height:30px;
+            border-radius:15px;
+            background-color:#bccad6;
+        
+        }
+        
+        #messAge {
+            font-weight:bold;
+            margin-top:200px;
+            color:white;
+            font-size:30px;
+            
+            
+            
+            
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <input type="text" id="textInput">
+    <button class="button" onclick="displayText()">Display</button>
+    <div id="messAge" type="text"></div>
+    <script>
+        function displayText() {
+            var text = document.getElementById("textInput").value;
+            document.getElementById("messAge").innerText = text;
+            document.getElementById("textInput").value = "";
+            
+        }
+
+    </script>
+    
+</body>
+</html>
