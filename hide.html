@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background: linear-gradient(90deg, #7a3b2e,#c83349,#f9ccac,#667292,#36486b);
+            text-align:center;
+        }
+        #myDiv {
+            margin-top:200px;
+            margin-bottom:40px;
+            font-weight:bold;
+            font-size:30px;
+        }
+
+        button {
+            height:40px;
+            border-radius:20px;
+            width:70px;
+            background-color:black;
+            color:white;
+            transition:all 0.3s ease;
+            font-weight:bold;
+        }
+        button:hover {
+            transform:scale(1.2);
+        }
+
+    </style>
+</head>
+<body>
+  
+    <button type="button" onclick="hideFunc()">Click!</button>
+      <div id="myDiv">You can see this text.</div>
+    <script>
+        function hideFunc(){
+           let text = document.getElementById("myDiv");
+           if (text.style.display == "none"){
+               text.style.display = "block";
+           }
+           else{
+               text.style.display = "none";
+               
+           }
+        }
+    </script>    
+</body>
+</html>
